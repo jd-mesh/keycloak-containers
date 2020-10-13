@@ -16,8 +16,8 @@ jobs:
         with:
           version: latest
       - name: build the image
-      run: |
-        docker buildx build \
-          --tag zhaojiq/keycloak-container:10.0.2 \
-          --platform linux/amd64,linux/arm64 \
-          -f server/Dockerfile server/ 
+        run: |
+          docker buildx build \
+            --tag zhaojiq/keycloak-container:10.0.2 \
+            --platform linux/amd64,linux/arm64 \
+            -f server/Dockerfile server/ 
