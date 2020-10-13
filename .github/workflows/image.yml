@@ -18,6 +18,7 @@ jobs:
       - name: build the image
         run: |
           docker buildx build \
-            --tag zhaojiq/keycloak-container:10.0.2 \
+            --tag zhaojiq/keycloak:10.0.2-multi-arch \
             --platform linux/amd64,linux/arm64 \
-            -f server/Dockerfile server/ 
+            -f server/Dockerfile server/ \
+            --push 
