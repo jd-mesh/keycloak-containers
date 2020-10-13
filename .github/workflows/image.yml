@@ -1,0 +1,23 @@
+name: build our image
+
+on:
+  push:
+    branches: 10.0.2-multi-arch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: install buildx
+        id: buildx
+        uses: crazy-max/ghaction-docker-buildx@v1
+        with:
+          version: latest
+      - name: build the image
+      run: |
+        docker buildx build \
+          --tag zhaojiq/keycloak-container:10.0.2 \
+          --platform linux/amd64,linux/arm64 \
+          -f server/Dockerfile server/ 
