@@ -32,7 +32,7 @@ jobs:
             --tag zhaojiq/keycloak:10.0.2-multi-arch \
             --tag zhaojiq/keycloak:10.0.2-multi-arch-8.3 \
             --tag zhaojiq/keycloak:10.0.2-multi-arch-8.3-201 \
-            --tag lastest \
+            --tag zhaojiq/keycloak:lastest \
             --platform linux/amd64,linux/arm64 \
             -f server/Dockerfile server/ \
             --push 
