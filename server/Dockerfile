@@ -1,10 +1,6 @@
 FROM registry.access.redhat.com/ubi8-minimal:8.3-230
 
-<<<<<<< HEAD
-ENV KEYCLOAK_VERSION 12.0.1
-=======
 ENV KEYCLOAK_VERSION 12.0.2
->>>>>>> 71c2c25 (changer keycloak version to 12.0.2)
 ENV JDBC_POSTGRES_VERSION 42.2.5
 ENV JDBC_MYSQL_VERSION 8.0.22
 ENV JDBC_MARIADB_VERSION 2.5.4
