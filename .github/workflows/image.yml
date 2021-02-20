@@ -2,7 +2,7 @@ name: build our image
 
 on:
   push:
-    branches: 12.0.2-multi-arch
+    branches: 12.0.3-multi-arch
 
 jobs:
   build:
@@ -29,9 +29,8 @@ jobs:
       - name: build the image
         run: |
           docker buildx build \
-            --tag zhaojiq/keycloak:12.0.2-multi-arch \
-            --tag zhaojiq/keycloak:12.0.2-multi-arch-8.3 \
-            --tag zhaojiq/keycloak:12.0.2-multi-arch-8.3-230 \
+            --tag zhaojiq/keycloak:12.0.3-multi-arch \
+            --tag zhaojiq/keycloak:12.0.3-multi-arch-8.3 \
             --tag zhaojiq/keycloak:lastest \
             --platform linux/amd64,linux/arm64 \
             -f server/Dockerfile server/ \
